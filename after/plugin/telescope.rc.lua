@@ -45,12 +45,15 @@ telescope.load_extension("file_browser")
 vim.keymap.set('n', 'ff',
   function()
     builtin.find_files({
-      no_ignore = false,
+      no_ignore = true,
       hidden = true
     })
   end)
 vim.keymap.set('n', 'fg', function()
   builtin.live_grep()
+end)
+vim.keymap.set('n', 'gf', function()
+  builtin.git_files()
 end)
 vim.keymap.set('n', 'fb', function()
   builtin.buffers()
@@ -70,6 +73,6 @@ vim.keymap.set("n", "sf", function()
     grouped = true,
     previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = { height = 30 }
   })
 end)
