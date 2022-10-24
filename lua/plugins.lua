@@ -8,10 +8,11 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+ -- use {
+  --  'svrana/neosolarized.nvim',
+    --requires = { 'tjdevries/colorbuddy.nvim' }
+  --}
+  use 'folke/tokyonight.nvim' -- Tokyoooo:PackerClean
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -43,7 +44,7 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   --use 'norcalli/nvim-colorizer.lua'
-  use 'ellisonleao/gruvbox.nvim'
+  --use 'ellisonleao/gruvbox.nvim'
   --use 'folke/zen-mode.nvim'
   use({
     "iamcco/markdown-preview.nvim",

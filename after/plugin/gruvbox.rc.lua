@@ -1,12 +1,12 @@
-vim.cmd([[colorscheme gruvbox]])
-vim.o.background = "dark"
+--vim.cmd([[colorscheme gruvbox]])
+--[[vim.o.background = "dark"
 require("gruvbox").setup({
   contrast = "hard",
   italic = false,
-})
-vim.cmd("colorscheme gruvbox")
+})]]--
+--vim.cmd("colorscheme gruvbox")
 
-function ColorMyPencils()
+--[[function colormypencils()
   vim.g.gruvbox_contrast_dark = 'hard'
   vim.g.gruvbox_invert_selection = '0'
   vim.opt.background = "dark"
@@ -16,31 +16,31 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  hl("SignColumn", {
+  hl("signcolumn", {
     bg = "none",
   })
 
-  hl("ColorColumn", {
+  hl("colorcolumn", {
     ctermbg = 0,
     bg = "#555555",
   })
 
-  hl("CursorLineNR", {
-    bg = "None"
-  })
-
-  hl("Normal", {
+  hl("cursorlinenr", {
     bg = "none"
   })
 
-  hl("LineNr", {
+  hl("normal", {
+    bg = "none"
+  })
+
+  hl("linenr", {
     fg = "#5eacd3"
   })
 
-  hl("netrwDir", {
+  hl("netrwdir", {
     fg = "#5eacd3"
   })
 
 end
 
-ColorMyPencils()
+colormypencils()]]--
